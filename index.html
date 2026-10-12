@@ -1,260 +1,321 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="fr">
 <head>
-	<title>CV - Hugo Girault - Ingénieur R&D</title>
-	
-	<!-- Meta -->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-	<link rel="shortcut icon" href="favicon.ico"> 
-	
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-	
-	<!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-	
-	<!-- Theme CSS -->  
-	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
-
-</head> 
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hugo Girault — Ingénieur R&amp;D</title>
+	<meta name="description" content="Hugo Girault, ingénieur R&amp;D à Rennes : systèmes backend performants pour le streaming vidéo, en C++23, Go et Python, avec un ancrage en apprentissage automatique.">
+	<link rel="canonical" href="https://giraulth.github.io/">
+	<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0d1015" media="(prefers-color-scheme: dark)">
+	<meta property="og:type" content="profile">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:url" content="https://giraulth.github.io/">
+	<meta property="og:title" content="Hugo Girault — Ingénieur R&amp;D">
+	<meta property="og:description" content="Systèmes backend performants pour le streaming vidéo : C++23, Go, Python et apprentissage automatique.">
+	<meta property="og:image" content="https://giraulth.github.io/assets/images/resume-profile.png">
+	<meta name="twitter:card" content="summary">
+	<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/site.css">
+	<script>
+		// Runs before first paint so the saved theme never flashes.
+		(() => {
+			let theme;
+			try { theme = localStorage.getItem('theme'); } catch {}
+			if (theme !== 'light' && theme !== 'dark') {
+				theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.dataset.theme = theme;
+			document.documentElement.classList.add('js');
+		})();
+	</script>
+	<script defer src="assets/js/site.js"></script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Hugo Girault",
+		"jobTitle": "Ingénieur R&D",
+		"url": "https://giraulth.github.io/",
+		"image": "https://giraulth.github.io/assets/images/resume-profile.png",
+		"email": "mailto:hugo.girault@broadpeak.tv",
+		"address": { "@type": "PostalAddress", "addressLocality": "Rennes", "addressCountry": "FR" },
+		"worksFor": { "@type": "Organization", "name": "Broadpeak" },
+		"alumniOf": { "@type": "CollegeOrUniversity", "name": "INSA Rennes" },
+		"sameAs": ["https://github.com/Giraulth", "https://www.linkedin.com/in/hugo-girault-591453159/"]
+	}
+	</script>
+</head>
 <body>
-	
-	<div class="main-wrapper">
-		<div class="container px-3 px-lg-5">
-			<article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
-				
-				<div class="resume-header">
-					<div class="row align-items-center">
-						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-							<h2 class="resume-name mb-0 text-uppercase">Hugo GIRAULT</h2>
-							<div class="resume-tagline mb-3 mb-md-0">Ingénieur R&D</div>
-						</div><!--//resume-title-->
-						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
-							<ul class="list-unstyled mb-0">
-								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg me-2"></i><a class="resume-link" href="mailto:#">hugo.girault@broadpeak.tv</a></li>
-								<li class="mb-2"><i class="fas fa-globe fa-fw fa-lg me-2"></i><a class="resume-link" href="#">https://giraulth.github.io/</a></li>
-								<li class="mb-2"><i class="fas fa-map-marker-alt fa-fw fa-lg me-2"></i>Rennes</li>
-								<li class="mb-2"><i class="fas fa-birthday-cake fa-fw fa-lg me-2"></i>26 ans</li>								
-							</ul>
-						</div><!--//resume-contact-->
-					</div><!--//row-->
-					
-				</div><!--//resume-header-->
-				<hr>
-				<div class="resume-intro py-3">
-					<div class="row align-items-center">
-						<div class="col-12 col-md-3 col-xl-2 text-center">
-						    <img class="resume-profile-image mb-3 mb-md-0 me-md-5  ms-md-0 rounded mx-auto" src="assets/images/resume-profile.png" alt="image">
+	<!-- Icons: Font Awesome Free 6.6.0 (CC BY 4.0), inlined to avoid loading the 1.5 MB FontAwesome script. -->
+	<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+		<symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+		<symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+		<symbol id="i-mail" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+		<symbol id="i-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+		<symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+		<symbol id="i-run" viewBox="0 0 448 512"><path d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288l21.3 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-21.3 0c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352L32 352c-17.7 0-32 14.3-32 32s14.3 32 32 32l69.6 0c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"/></symbol>
+		<symbol id="i-terminal" viewBox="0 0 576 512"><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416l288 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-288 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></symbol>
+		<symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol>
+		<symbol id="i-cap" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
+		<symbol id="i-lang" viewBox="0 0 640 512"><path d="M0 128C0 92.7 28.7 64 64 64l192 0 48 0 16 0 256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64l-256 0-16 0-48 0L64 448c-35.3 0-64-28.7-64-64L0 128zm320 0l0 256 256 0 0-256-256 0zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1 73.6 0 8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276l-38 0 19-42.8zM448 164c11 0 20 9 20 20l0 4 44 0 16 0c11 0 20 9 20 20s-9 20-20 20l-2 0-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45L448 228l-72 0c-11 0-20-9-20-20s9-20 20-20l52 0 0-4c0-11 9-20 20-20z"/></symbol>
+		<symbol id="i-ext" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></symbol>
+		<symbol id="i-print" viewBox="0 0 512 512"><path d="M128 0C92.7 0 64 28.7 64 64l0 96 64 0 0-96 226.7 0L384 93.3l0 66.7 64 0 0-66.7c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0L128 0zM384 352l0 32 0 64-256 0 0-64 0-16 0-16 256 0zm64 32l32 0c17.7 0 32-14.3 32-32l0-96c0-35.3-28.7-64-64-64L64 192c-35.3 0-64 28.7-64 64l0 96c0 17.7 14.3 32 32 32l32 0 0 64c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-64zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></symbol>
+	</svg>
+
+	<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+	<header class="site-header">
+		<nav class="nav container" aria-label="Navigation principale">
+			<a class="wordmark" href="#accueil">Hugo Girault<span>.</span></a>
+			<ul class="nav-links">
+				<li><a href="#parcours">Parcours</a></li>
+				<li><a href="#recherche">Recherche</a></li>
+				<li><a href="#projets">Projets</a></li>
+				<li><a href="#competences">Compétences</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="theme-toggle" type="button" aria-label="Changer de thème">
+				<svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+				<svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+			</button>
+		</nav>
+	</header>
+
+	<main id="contenu" class="container">
+		<section class="hero" id="accueil" aria-labelledby="hero-title">
+			<div class="hero-copy">
+				<p class="kicker"><span>Ingénieur R&amp;D</span><span>Broadpeak</span><span>Rennes</span></p>
+				<h1 id="hero-title">Hugo <em>Girault</em></h1>
+				<p class="lead">Je conçois des systèmes backend performants pour le streaming vidéo, du C++23 à l’apprentissage automatique.</p>
+				<p class="hero-text">Ingénieur informatique avec 4 ans d’expérience en backend : programmation parallèle, bases de données et microservices. Mon expérience en recherche m’a aussi apporté de solides bases en apprentissage automatique.</p>
+				<p class="print-only">hugo.girault@broadpeak.tv · github.com/Giraulth · linkedin.com/in/hugo-girault-591453159 · Rennes</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="mailto:hugo.girault@broadpeak.tv"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Me contacter</a>
+					<a class="btn btn-ghost" href="#parcours">Voir le parcours</a>
+					<a class="icon-link" href="https://github.com/Giraulth" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+					<a class="icon-link" href="https://www.linkedin.com/in/hugo-girault-591453159/" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+				</div>
+			</div>
+			<figure class="portrait">
+				<img src="assets/images/resume-profile.png" alt="Portrait de Hugo Girault" width="500" height="500" fetchpriority="high">
+				<figcaption>
+					<span class="pulse" aria-hidden="true"></span>
+					<div><strong>Actuellement chez Broadpeak</strong><span>Ingénieur R&amp;D · Content Personalisation</span></div>
+				</figcaption>
+			</figure>
+		</section>
+
+		<dl class="facts">
+			<div class="fact"><dt>4 ans</dt><dd>d’expérience en développement backend</dd></div>
+			<div class="fact"><dt>C++23</dt><dd>avec Go, Python et ClickHouse</dd></div>
+			<div class="fact"><dt>Prix 2024</dt><dd>Best Short Paper Award, ACM Mile High Video</dd></div>
+			<div class="fact"><dt>INSA Rennes</dt><dd>Ingénieur informatique, option cloud</dd></div>
+		</dl>
+
+		<section class="section" id="parcours" aria-labelledby="parcours-title">
+			<div class="section-head reveal">
+				<p class="section-label">01 — Parcours</p>
+				<div>
+					<h2 class="section-title" id="parcours-title">Expérience <em>professionnelle</em></h2>
+					<p class="section-intro">Chez Broadpeak depuis 2022, de l’analytics à la personnalisation de contenus vidéo, après un premier passage en DevOps chez Sopra Steria.</p>
+				</div>
+			</div>
+
+			<article class="company reveal">
+				<div class="company-info">
+					<h3>Broadpeak</h3>
+					<p>2022 — aujourd’hui</p>
+				</div>
+				<ol class="roles">
+					<li class="role is-current">
+						<div class="role-head">
+							<h4>Ingénieur R&amp;D, Content Personalisation <span class="badge">Actuel</span></h4>
+							<p class="role-date"><time datetime="2025-09">sept. 2025</time> — aujourd’hui</p>
 						</div>
-						
-						<div class="col text-start">
-							<p class="mb-0">Ingénieur informatique avec 4 ans d'expérience en backend, je possède des compétences en programmation parallèle, en bases de données et en microservices. Grâce à mon expérience en recherche, j'ai aussi de bonnes notions en apprentissage automatique. </p>
-						</div><!--//col-->
-					</div>
-				</div><!--//resume-intro-->
-				<hr>
-				<div class="resume-body">
-					<div class="row">
-						<div class="resume-main col-12 col-lg-8 col-xl-9   pe-0   pe-lg-5">
-							<section class="work-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Expériences Professionnelles</h3>
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Ingénieur R&D Content Personnalisation</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Broadpeak | Septembre 2025 - Présent</div>
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Développement en C++23 de modules NGINX pour la manipulation de manifestes DASH/HLS et l'insertion/remplacement dynamique de publicités vidéo.</li>
-											<li>Implémentation de la gestion des campagnes VAST/VMAP et des slots publicitaires en temps réel, avec stockage des états dans Valkey.</li>
-										</ul>
-									</div>
-								</div>
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Ingénieur R&D Analytics</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Broadpeak | Septembre 2022 - Août 2025</div>
-										
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Conception et intégration d'un module d'IA pour la prévision de séries temporelles, en utilisant la bibliothèque statsmodels et des techniques avancées d'apprentissage automatique.</li>
-											<li>Développement logiciel en C++23, exploitant des fonctionnalités modernes, telles que les coroutines, pour un asynchronisme avancé. Maîtrise
-												des bibliothèques Seastar (framework asynchrone haute performance), Prometheus-cpp (monitoring et métriques) et Boost (utilitaires polyvalents).</li>
-											<li>Conception et développement d'un générateur de données haute performance en Go 1.21, tirant parti de la programmation parallèle pour une scalabilité optimale.</li>
-											<li>Utilisation d'une base de données orientée colonne (ClickHouse) pour un stockage de données efficace et des analyses haute performance.</li>
-											<li>Déploiement d'applications en utilisant Docker pour la conteneurisation et Ansible pour la configuration et l'orchestration automatisées.</li>
-										</ul>
-									</div>
-								</div><!--//item-->
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Ingénieur de recherche</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Broadpeak | Septembre 2023 - Février 2024</div>
-										
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Rédaction d'un article de recherche en lien avec mon sujet de stage. Ce travail a reçu le prix 'Best Short Paper Award' lors de la conférence Mile High Video à Denver en Février 2024.</li>
-										</ul>
-									</div>
-								</div><!--//item-->
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Stagiaire en apprentissage automatique</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Broadpeak | Février 2022 - Août 2022</div>
-										
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Conception de modèles d'apprentissage automatique pour estimer la qualité perçue par l'utilisateur à partir des métriques disponibles sur les serveurs de cache.</li>
-											<li>Mise en place d'un pipeline de traitements des données et déploiement des modèles.</li>
-											<li>Présentation du sujet à l'IBC 2022.</li>
-										</ul>
-									</div>
-								</div><!--//item-->
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Stagiaire DevOps</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Sopra Steria | Mai 2021 - Août 2021</div>
-										
-									</div>
-									<div class="item-content">
-										<ul class="resume-list">
-											<li>Déploiement d'applications conteneurisées sur un cluster Kubernetes, avec définition du pipeline d'intégration et de déploiement continus (CI/CD).</li>
-											<li>Réalisation d'évaluations de performance des applications afin d'assurer une efficacité optimale.</li>
-										</ul>
-									</div>
-								</div><!--//item-->
-								
-							</section><!--//work-section-->
+						<ul class="role-points">
+							<li>Développement de modules NGINX en C++23 pour manipuler les manifestes DASH/HLS et insérer ou remplacer dynamiquement des publicités vidéo.</li>
+							<li>Gestion en temps réel des campagnes VAST/VMAP et des slots publicitaires, avec stockage des états dans Valkey.</li>
+						</ul>
+						<ul class="tags" aria-label="Technologies"><li>C++23</li><li>NGINX</li><li>DASH/HLS</li><li>VAST/VMAP</li><li>Valkey</li></ul>
+					</li>
+					<li class="role">
+						<div class="role-head">
+							<h4>Ingénieur R&amp;D, Analytics</h4>
+							<p class="role-date"><time datetime="2022-09">sept. 2022</time> — <time datetime="2025-08">août 2025</time></p>
+						</div>
+						<ul class="role-points">
+							<li>Conception et intégration d’un module d’IA de prévision de séries temporelles (statsmodels, apprentissage automatique).</li>
+							<li>Développement en C++23 moderne : coroutines et asynchronisme haute performance avec Seastar, Prometheus-cpp et Boost.</li>
+							<li>Générateur de données haute performance en Go 1.21, tirant parti de la programmation parallèle.</li>
+							<li>Stockage et analyses haute performance sur ClickHouse, base de données orientée colonne.</li>
+							<li>Conteneurisation avec Docker, configuration et orchestration automatisées avec Ansible.</li>
+						</ul>
+						<ul class="tags" aria-label="Technologies"><li>C++23</li><li>Seastar</li><li>Go</li><li>ClickHouse</li><li>Python</li><li>Ansible</li></ul>
+					</li>
+					<li class="role">
+						<div class="role-head">
+							<h4>Ingénieur de recherche</h4>
+							<p class="role-date"><time datetime="2023-09">sept. 2023</time> — <time datetime="2024-02">févr. 2024</time></p>
+						</div>
+						<p>Rédaction d’un article de recherche dans la continuité de mon stage, récompensé par le Best Short Paper Award à ACM Mile High Video (Denver, février 2024).</p>
+						<a class="text-link" href="#recherche">Voir la publication</a>
+					</li>
+					<li class="role">
+						<div class="role-head">
+							<h4>Stagiaire en apprentissage automatique</h4>
+							<p class="role-date"><time datetime="2022-02">févr. 2022</time> — <time datetime="2022-08">août 2022</time></p>
+						</div>
+						<ul class="role-points">
+							<li>Modèles d’apprentissage automatique estimant la qualité perçue par l’utilisateur à partir des métriques des serveurs de cache.</li>
+							<li>Pipeline de traitement des données et déploiement des modèles.</li>
+							<li>Présentation du sujet à l’IBC 2022.</li>
+						</ul>
+					</li>
+				</ol>
+			</article>
 
-							
-							<section class="project-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Projets disponibles sur mon GitHub</h3>
-								<div class="item mb-3">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Strava V2 (Python)</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Open Source</div>
-										
-									</div>
-									<div class="item-content">
-										<p>Projet à destination des sportifs — Automatisation en Python pour récupérer et traiter les activités de l'API Strava, avec exécution régulière via GitHub Actions et persistance des informations dans Redis (Upstash). Visualisation des métriques sur Grafana Cloud, architecture optimisée pour le coût et entièrement hébergée sur des solutions gratuites</p>
-									</div>
-								</div><!--//item-->
-								<div class="item">
-									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Advent of code 2022 (C++)</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-start text-md-end">Open Source</div>
-										
-									</div>
-									<div class="item-content">
-										<p>Collection de solutions aux défis quotidiens de l'Advent of Code 2022, une série de puzzles de programmation publiés chaque année en décembre. Ces défis couvrent une variété de problèmes algorithmiques et sont conçus pour améliorer les compétences en résolution de problèmes et en programmation.</p>
-										
-									</div>
-								</div><!--//item-->
-							</section><!--//project-section-->	
-						</div><!--//resume-main-->
-						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
-							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Compétences</h3>
-								<div class="item">
-									<h4 class="item-title">Techniques</h4>
-									<ul class="list-unstyled resume-skills-list">
-										<li class="mb-2">Clickhouse</li>
-										<li class="mb-2">C++ 23<li>
-											<li class="mb-2">Python 3.10</li>
-											<li class="mb-2">Go 1.21</li>
-											<li class="mb-2">Programmation orientée objet</li>
-											<li class="mb-2">Programmation parallèle</li>
-											<li class="mb-2">Ansible</li>
-											<li class="mb-2">Docker</li>
-											<li class="mb-2">Kubernetes</li>
-										</ul>
-									</div><!--//item-->
-									<div class="item">
-										<h4 class="item-title">Professionnelles</h4>
-										<ul class="list-unstyled resume-skills-list">
-											<li class="mb-2">Communication efficace</li>
-											<li class="mb-2">Esprit d'équipe<li>
-												<li class="mb-2">Autonomie</li>
-												<li>Bonne gestion du temps</li>
-											</ul>
-										</div><!--//item-->
-									</section><!--//skills-section-->
-									<section class="education-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Formation</h3>
-										<ul class="list-unstyled resume-education-list">
-											<li class="mb-3">
-												<div class="resume-degree font-weight-bold">Diplôme d'ingénieur informatique option cloud</div>
-												<div class="resume-degree-org text-muted">INSA Rennes</div>
-												<div class="resume-degree-time text-muted">2017 - 2022</div>
-											</li>
-										
-										</ul>
-									</section><!--//education-section-->
-									<section class="education-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Prix</h3>
-										<ul class="list-unstyled resume-awards-list">
-											<li class="mb-3">
-												<div class="font-weight-bold">Best Short Paper Award</div>
-												<div class="text-muted">Inferring Video Streaming Quality of Experience at Scale using Incremental Statistics from CDN Logs</div>
-												<div class="text-muted">ACM Mile High Video (2024)</div>
-											</li>
-										</ul>
-									</section><!--//education-section-->
-									<section class="skills-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Langues</h3>
-										<ul class="list-unstyled resume-lang-list">
-											<li class="mb-2">Anglais <span class="text-muted">C1 (960 au TOIEC)</span></li>
-											<li>Espagnol <span class="text-muted">B2</span></li>
-										</ul>
-									</section><!--//certificates-section-->
-									
-								</aside><!--//resume-aside-->
-							</div><!--//row-->
-						</div><!--//resume-body-->
-						<hr>
-						<div class="resume-footer text-center">
-							<ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
-								<li class="list-inline-item mb-lg-0 me-3">
-									<a class="resume-link" href="https://github.com/Giraulth">
-										<i class="fa-brands fa-github-square fa-2x me-2" data-fa-transform="down-4"></i>
-										<span class="d-none d-lg-inline-block text-muted">GitHub</span>
-									</a>
-								</li>
-								<li class="list-inline-item mb-lg-0 me-3">
-									<a class="resume-link" href="https://www.linkedin.com/in/hugo-girault-591453159/">
-										<i class="fa-brands fa-linkedin fa-2x me-2" data-fa-transform="down-4"></i>
-										<span class="d-none d-lg-inline-block text-muted">LinkedIn</span>
-									</a>
-								</li>
-								<li class="list-inline-item mb-lg-0 me-3">
-									<a class="resume-link" href="https://dl.acm.org/doi/10.1145/3638036.3640803">
-										<i class="fa-solid fa-book-open fa-2x me-2" data-fa-transform="down-4"></i>
-										<span class="d-none d-lg-inline-block text-muted">ACM Digital Library</span>
-									</a>
-								</li>
-							</ul>
-						</div><!--//resume-footer-->
+			<article class="company reveal">
+				<div class="company-info">
+					<h3>Sopra Steria</h3>
+					<p>2021</p>
+				</div>
+				<ol class="roles">
+					<li class="role">
+						<div class="role-head">
+							<h4>Stagiaire DevOps</h4>
+							<p class="role-date"><time datetime="2021-05">mai 2021</time> — <time datetime="2021-08">août 2021</time></p>
+						</div>
+						<ul class="role-points">
+							<li>Déploiement d’applications conteneurisées sur un cluster Kubernetes et définition du pipeline CI/CD.</li>
+							<li>Évaluations de performance pour garantir l’efficacité des applications.</li>
+						</ul>
+						<ul class="tags" aria-label="Technologies"><li>Kubernetes</li><li>CI/CD</li><li>Docker</li></ul>
+					</li>
+				</ol>
+			</article>
+		</section>
+
+		<section class="section" id="recherche" aria-labelledby="recherche-title">
+			<div class="section-head reveal">
+				<p class="section-label">02 — Recherche</p>
+				<h2 class="section-title" id="recherche-title">Recherche <em>récompensée</em></h2>
+			</div>
+			<article class="paper indent reveal">
+				<div class="paper-icon"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></div>
+				<div>
+					<p class="paper-meta">Best Short Paper Award · ACM Mile High Video 2024 · Denver</p>
+					<h3 lang="en">Inferring Video Streaming Quality of Experience at Scale using Incremental Statistics from CDN Logs</h3>
+					<p class="paper-desc">Estimer à grande échelle la qualité d’expérience perçue par les spectateurs, à partir de statistiques incrémentales calculées sur les logs CDN. Un travail issu de mon stage en apprentissage automatique, dont le sujet avait été présenté à l’IBC 2022.</p>
+					<a class="text-link" href="https://dl.acm.org/doi/10.1145/3638036.3640803">Lire l’article sur ACM Digital Library <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+				</div>
+			</article>
+		</section>
+
+		<section class="section" id="projets" aria-labelledby="projets-title">
+			<div class="section-head reveal">
+				<p class="section-label">03 — Projets</p>
+				<div>
+					<h2 class="section-title" id="projets-title">Projets <em>personnels</em></h2>
+					<p class="section-intro">Disponibles en open source sur GitHub.</p>
+				</div>
+			</div>
+			<div class="indent">
+				<div class="projects">
+					<article class="project reveal">
+						<div class="project-top">
+							<span class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-run"/></svg></span>
+							<span class="project-kind">Sport · Data</span>
+						</div>
+						<h3>Strava V2</h3>
+						<p>Récupération et traitement automatisés des activités Strava via GitHub Actions, stockage dans Redis (Upstash) et visualisation des métriques sur Grafana Cloud. Une architecture optimisée pour le coût, entièrement hébergée sur des offres gratuites.</p>
+						<ul class="tags" aria-label="Technologies"><li>Python</li><li>GitHub Actions</li><li>Redis</li><li>Grafana</li></ul>
 					</article>
-					
-				</div><!--//container-->
-				
-				<footer class="footer text-center py-4">
-					<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-					<small class="copyright text-muted">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-				</footer>
-				
-			</div><!--//main-wrapper-->
-			
-		<script src="assets/js/analytics.js"></script>
+					<article class="project reveal">
+						<div class="project-top">
+							<span class="project-icon"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg></span>
+							<span class="project-kind">Algorithmique</span>
+						</div>
+						<h3>Advent of Code 2022</h3>
+						<p>Solutions aux puzzles quotidiens de l’Advent of Code 2022 : une série de problèmes algorithmiques variés pour affiner la résolution de problèmes et la pratique du C++.</p>
+						<ul class="tags" aria-label="Technologies"><li>C++</li><li>Algorithmes</li></ul>
+					</article>
+				</div>
+				<a class="text-link" href="https://github.com/Giraulth?tab=repositories">Tous mes dépôts sur GitHub <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+			</div>
+		</section>
 
+		<section class="section" id="competences" aria-labelledby="competences-title">
+			<div class="section-head reveal">
+				<p class="section-label">04 — Compétences</p>
+				<h2 class="section-title" id="competences-title">Compétences <em>&amp; formation</em></h2>
+			</div>
+			<div class="indent">
+				<div class="skills">
+					<div class="skill-group reveal">
+						<h3>Langages</h3>
+						<ul class="chips"><li>C++23</li><li>Python 3.10</li><li>Go 1.21</li></ul>
+					</div>
+					<div class="skill-group reveal">
+						<h3>Systèmes &amp; performance</h3>
+						<ul class="chips"><li>Programmation parallèle</li><li>Coroutines &amp; asynchronisme</li><li>Seastar</li><li>NGINX</li><li>Programmation orientée objet</li></ul>
+					</div>
+					<div class="skill-group reveal">
+						<h3>Données &amp; IA</h3>
+						<ul class="chips"><li>ClickHouse</li><li>Valkey / Redis</li><li>Apprentissage automatique</li><li>Séries temporelles</li></ul>
+					</div>
+					<div class="skill-group reveal">
+						<h3>Infrastructure</h3>
+						<ul class="chips"><li>Docker</li><li>Kubernetes</li><li>Ansible</li><li>CI/CD</li><li>Prometheus</li></ul>
+					</div>
+					<div class="skill-group reveal">
+						<h3>Savoir-être</h3>
+						<ul class="chips"><li>Communication efficace</li><li>Esprit d’équipe</li><li>Autonomie</li><li>Bonne gestion du temps</li></ul>
+					</div>
+				</div>
+				<div class="cards">
+					<article class="card reveal">
+						<p class="card-label"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Formation</p>
+						<h3>INSA Rennes</h3>
+						<p>Diplôme d’ingénieur informatique, option cloud</p>
+						<p class="role-date">2017 — 2022</p>
+					</article>
+					<article class="card reveal">
+						<h3 class="card-label"><svg class="icon" aria-hidden="true"><use href="#i-lang"/></svg>Langues</h3>
+						<dl class="languages">
+							<div><dt>Anglais</dt><dd>C1 · TOEIC 960</dd></div>
+							<div><dt>Espagnol</dt><dd>B2</dd></div>
+						</dl>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="section contact" id="contact" aria-labelledby="contact-title">
+			<div class="section-head reveal">
+				<p class="section-label">05 — Contact</p>
+				<div>
+					<h2 class="contact-title" id="contact-title">Envie d’<em>échanger</em>&nbsp;?</h2>
+					<a class="mail-link" href="mailto:hugo.girault@broadpeak.tv">hugo.girault@broadpeak.tv</a>
+					<div class="contact-actions">
+						<a class="btn btn-ghost" href="https://www.linkedin.com/in/hugo-girault-591453159/"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+						<a class="btn btn-ghost" href="https://github.com/Giraulth"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+						<button class="btn btn-ghost" type="button" id="print-resume"><svg class="icon" aria-hidden="true"><use href="#i-print"/></svg>Imprimer / PDF</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer container">
+		<span>Hugo Girault · Ingénieur R&amp;D</span>
+		<span>Basé sur DevResume par <a href="https://themes.3rdwavemedia.com/">Xiaoying Riley</a></span>
+		<a href="#accueil">Retour en haut ↑</a>
+	</footer>
+
+	<script src="assets/js/analytics.js"></script>
 </body>
-</html> 
-
+</html>
