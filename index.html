@@ -19,7 +19,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/site.css">
+	<link rel="stylesheet" href="assets/css/site.css?v=3">
 	<script>
 		// Runs before first paint so the saved theme never flashes.
 		(() => {
@@ -32,7 +32,7 @@
 			document.documentElement.classList.add('js');
 		})();
 	</script>
-	<script defer src="assets/js/site.js"></script>
+	<script defer src="assets/js/site.js?v=2"></script>
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -73,6 +73,7 @@
 			<a class="wordmark" href="#accueil">Hugo Girault<span>.</span></a>
 			<ul class="nav-links">
 				<li><a href="#parcours">Parcours</a></li>
+				<li><a href="#terrain">Sur le terrain</a></li>
 				<li><a href="#recherche">Recherche</a></li>
 				<li><a href="#projets">Projets</a></li>
 				<li><a href="#competences">Compétences</a></li>
@@ -90,8 +91,8 @@
 			<div class="hero-copy">
 				<p class="kicker"><span>Ingénieur R&amp;D</span><span>Broadpeak</span><span>Rennes</span></p>
 				<h1 id="hero-title">Hugo <em>Girault</em></h1>
-				<p class="lead">Je conçois des systèmes backend performants pour le streaming vidéo, du C++23 à l’apprentissage automatique.</p>
-				<p class="hero-text">Ingénieur informatique avec 4 ans d’expérience en backend : programmation parallèle, bases de données et microservices. Mon expérience en recherche m’a aussi apporté de solides bases en apprentissage automatique.</p>
+				<p class="lead">Je conçois des systèmes backend performants pour le streaming vidéo.</p>
+				<p class="hero-text">Ingénieur informatique avec 4 ans d'expérience en backend : programmation parallèle, bases de données et microservices. Mon expérience en recherche m'a aussi apporté de solides bases en apprentissage automatique.</p>
 				<p class="print-only">hugo.girault@broadpeak.tv · github.com/Giraulth · linkedin.com/in/hugo-girault-591453159 · Rennes</p>
 				<div class="hero-actions">
 					<a class="btn btn-primary" href="mailto:hugo.girault@broadpeak.tv"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Me contacter</a>
@@ -109,11 +110,10 @@
 			</figure>
 		</section>
 
-		<dl class="facts">
-			<div class="fact"><dt>4 ans</dt><dd>d’expérience en développement backend</dd></div>
-			<div class="fact"><dt>C++23</dt><dd>avec Go, Python et ClickHouse</dd></div>
-			<div class="fact"><dt>Prix 2024</dt><dd>Best Short Paper Award, ACM Mile High Video</dd></div>
-			<div class="fact"><dt>INSA Rennes</dt><dd>Ingénieur informatique, option cloud</dd></div>
+		<dl class="facts" aria-label="Mes domaines d’expertise">
+			<div class="fact"><dt>Backend</dt><dd>Systèmes performants, asynchronisme et programmation parallèle.</dd></div>
+			<div class="fact"><dt>Streaming vidéo</dt><dd>Manifestes DASH/HLS et personnalisation des contenus.</dd></div>
+			<div class="fact"><dt>Données &amp; IA</dt><dd>Analyses à grande échelle et prévision de séries temporelles.</dd></div>
 		</dl>
 
 		<section class="section" id="parcours" aria-labelledby="parcours-title">
@@ -121,26 +121,29 @@
 				<p class="section-label">01 — Parcours</p>
 				<div>
 					<h2 class="section-title" id="parcours-title">Expérience <em>professionnelle</em></h2>
-					<p class="section-intro">Chez Broadpeak depuis 2022, de l’analytics à la personnalisation de contenus vidéo, après un premier passage en DevOps chez Sopra Steria.</p>
+					<p class="section-intro">Chez Broadpeak depuis 2022, de l'analytics à la personnalisation de contenus vidéo, après un premier passage en DevOps chez Sopra Steria.</p>
 				</div>
 			</div>
 
 			<article class="company reveal">
 				<div class="company-info">
 					<h3>Broadpeak</h3>
-					<p>2022 — aujourd’hui</p>
+					<p>2022 — aujourd'hui</p>
 				</div>
 				<ol class="roles">
 					<li class="role is-current">
 						<div class="role-head">
 							<h4>Ingénieur R&amp;D, Content Personalisation <span class="badge">Actuel</span></h4>
-							<p class="role-date"><time datetime="2025-09">sept. 2025</time> — aujourd’hui</p>
+							<p class="role-date"><time datetime="2025-09">sept. 2025</time> — aujourd'hui</p>
 						</div>
 						<ul class="role-points">
 							<li>Développement de modules NGINX en C++23 pour manipuler les manifestes DASH/HLS et insérer ou remplacer dynamiquement des publicités vidéo.</li>
+							<li>Assemblage de manifestes (manifest stitching) et gestion de grandes fenêtres DVR grâce au traitement incrémental des manifestes.</li>
 							<li>Gestion en temps réel des campagnes VAST/VMAP et des slots publicitaires, avec stockage des états dans Valkey.</li>
+							<li>Déploiement du produit sur des clusters Kubernetes à l'aide de charts Helm.</li>
+							<li>Solution testée sous k6 jusqu'à 10 000 utilisateurs virtuels simultanés sur une seule instance.</li>
 						</ul>
-						<ul class="tags" aria-label="Technologies"><li>C++23</li><li>NGINX</li><li>DASH/HLS</li><li>VAST/VMAP</li><li>Valkey</li></ul>
+						<ul class="tags" aria-label="Technologies"><li>C++23</li><li>NGINX</li><li>DASH/HLS</li><li>VAST/VMAP</li><li>Valkey</li><li>Kubernetes</li><li>Helm</li></ul>
 					</li>
 					<li class="role">
 						<div class="role-head">
@@ -148,7 +151,8 @@
 							<p class="role-date"><time datetime="2022-09">sept. 2022</time> — <time datetime="2025-08">août 2025</time></p>
 						</div>
 						<ul class="role-points">
-							<li>Conception et intégration d’un module d’IA de prévision de séries temporelles (statsmodels, apprentissage automatique).</li>
+							<li>Contribution à une solution d'analytics utilisée par un client comptant plus d'un million de sessions simultanées.</li>
+							<li>Conception et intégration d'un module d'IA de prévision de séries temporelles (statsmodels, apprentissage automatique).</li>
 							<li>Développement en C++23 moderne : coroutines et asynchronisme haute performance avec Seastar, Prometheus-cpp et Boost.</li>
 							<li>Générateur de données haute performance en Go 1.21, tirant parti de la programmation parallèle.</li>
 							<li>Stockage et analyses haute performance sur ClickHouse, base de données orientée colonne.</li>
@@ -161,7 +165,7 @@
 							<h4>Ingénieur de recherche</h4>
 							<p class="role-date"><time datetime="2023-09">sept. 2023</time> — <time datetime="2024-02">févr. 2024</time></p>
 						</div>
-						<p>Rédaction d’un article de recherche dans la continuité de mon stage, récompensé par le Best Short Paper Award à ACM Mile High Video (Denver, février 2024).</p>
+						<p>Rédaction d'un article de recherche dans la continuité de mon stage, récompensé par le Best Short Paper Award à ACM Mile High Video (Denver, février 2024).</p>
 						<a class="text-link" href="#recherche">Voir la publication</a>
 					</li>
 					<li class="role">
@@ -170,10 +174,11 @@
 							<p class="role-date"><time datetime="2022-02">févr. 2022</time> — <time datetime="2022-08">août 2022</time></p>
 						</div>
 						<ul class="role-points">
-							<li>Modèles d’apprentissage automatique estimant la qualité perçue par l’utilisateur à partir des métriques des serveurs de cache.</li>
+							<li>Modèles d'apprentissage automatique estimant la qualité perçue par l'utilisateur à partir des métriques des serveurs de cache.</li>
 							<li>Pipeline de traitement des données et déploiement des modèles.</li>
-							<li>Présentation du sujet à l’IBC 2022.</li>
+							<li>Présentation du sujet à l'IBC 2022.</li>
 						</ul>
+						<ul class="tags" aria-label="Technologies et domaines"><li>Python</li><li>scikit-learn</li><li>Apprentissage automatique</li><li>Traitement de données</li><li>QoE</li></ul>
 					</li>
 				</ol>
 			</article>
@@ -190,8 +195,8 @@
 							<p class="role-date"><time datetime="2021-05">mai 2021</time> — <time datetime="2021-08">août 2021</time></p>
 						</div>
 						<ul class="role-points">
-							<li>Déploiement d’applications conteneurisées sur un cluster Kubernetes et définition du pipeline CI/CD.</li>
-							<li>Évaluations de performance pour garantir l’efficacité des applications.</li>
+							<li>Déploiement d'applications conteneurisées sur un cluster Kubernetes et définition du pipeline CI/CD.</li>
+							<li>Évaluations de performance pour garantir l'efficacité des applications.</li>
 						</ul>
 						<ul class="tags" aria-label="Technologies"><li>Kubernetes</li><li>CI/CD</li><li>Docker</li></ul>
 					</li>
@@ -199,25 +204,55 @@
 			</article>
 		</section>
 
+		<section class="section" id="terrain" aria-labelledby="terrain-title">
+			<div class="section-head reveal">
+				<p class="section-label">02 — Sur le terrain</p>
+				<div>
+					<h2 class="section-title" id="terrain-title">Au-delà <em>du code</em></h2>
+					<p class="section-intro">Échanger avec les clients, rester à l’écoute des évolutions du secteur et m’engager dans la vie de l’entreprise, au-delà des sujets techniques.</p>
+				</div>
+			</div>
+			<div class="field-grid indent">
+				<article class="field-card reveal">
+					<p class="field-meta">États-Unis · une semaine chez un client</p>
+					<h3>Déployer et dialoguer</h3>
+					<p>Déplacement d’une semaine aux États-Unis pour déployer notre solution chez un client et échanger avec lui sur son architecture.</p>
+					<ul class="tags" aria-label="Axes de la mission"><li>Déploiement sur site</li><li>Architecture</li><li>Relation client</li></ul>
+				</article>
+				<article class="field-card reveal">
+					<p class="field-meta">IBC · édition 2026</p>
+					<h3>Découvrir les tendances du secteur</h3>
+					<p>Participation à l’IBC 2026 pour découvrir les nouvelles tendances du moment dans l’écosystème du streaming vidéo et du broadcast.</p>
+					<ul class="tags" aria-label="Axes de la visite"><li>Veille technologique</li><li>Streaming vidéo</li><li>Broadcast</li></ul>
+				</article>
+				<article class="field-card reveal">
+					<p class="field-meta">Broadpeak · engagement collectif</p>
+					<h3>Membre du CSE</h3>
+					<p>Membre du comité social et économique (CSE) de Broadpeak : un engagement dans la vie collective de l’entreprise, au-delà de mon rôle d’ingénieur.</p>
+					<ul class="tags" aria-label="Domaines d’engagement"><li>CSE</li><li>Vie de l’entreprise</li><li>Engagement collectif</li></ul>
+				</article>
+			</div>
+		</section>
+
 		<section class="section" id="recherche" aria-labelledby="recherche-title">
 			<div class="section-head reveal">
-				<p class="section-label">02 — Recherche</p>
-				<h2 class="section-title" id="recherche-title">Recherche <em>récompensée</em></h2>
+				<p class="section-label">03 — Recherche</p>
+				<h2 class="section-title" id="recherche-title">Publication <em>scientifique</em></h2>
 			</div>
 			<article class="paper indent reveal">
 				<div class="paper-icon"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></div>
 				<div>
 					<p class="paper-meta">Best Short Paper Award · ACM Mile High Video 2024 · Denver</p>
 					<h3 lang="en">Inferring Video Streaming Quality of Experience at Scale using Incremental Statistics from CDN Logs</h3>
-					<p class="paper-desc">Estimer à grande échelle la qualité d’expérience perçue par les spectateurs, à partir de statistiques incrémentales calculées sur les logs CDN. Un travail issu de mon stage en apprentissage automatique, dont le sujet avait été présenté à l’IBC 2022.</p>
-					<a class="text-link" href="https://dl.acm.org/doi/10.1145/3638036.3640803">Lire l’article sur ACM Digital Library <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+					<p class="paper-desc">Estimer à grande échelle la qualité d'expérience perçue par les spectateurs, à partir de statistiques incrémentales calculées sur les logs CDN. Un travail issu de mon stage en apprentissage automatique, dont le sujet avait été présenté à l'IBC 2022.</p>
+					<a class="text-link" href="https://dl.acm.org/doi/10.1145/3638036.3640803">Lire l'article sur ACM Digital Library <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
 				</div>
 			</article>
 		</section>
 
 		<section class="section" id="projets" aria-labelledby="projets-title">
 			<div class="section-head reveal">
-				<p class="section-label">03 — Projets</p>
+				<p class="section-label">04 — Projets</p>
 				<div>
 					<h2 class="section-title" id="projets-title">Projets <em>personnels</em></h2>
 					<p class="section-intro">Disponibles en open source sur GitHub.</p>
@@ -231,7 +266,29 @@
 							<span class="project-kind">Sport · Data</span>
 						</div>
 						<h3>Strava V2</h3>
+						<a class="project-repo" href="https://github.com/Giraulth/StravaV2" aria-label="Voir le dépôt Strava V2 sur GitHub">Voir le dépôt <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
 						<p>Récupération et traitement automatisés des activités Strava via GitHub Actions, stockage dans Redis (Upstash) et visualisation des métriques sur Grafana Cloud. Une architecture optimisée pour le coût, entièrement hébergée sur des offres gratuites.</p>
+						<div class="project-carousel" role="region" aria-roledescription="carrousel" aria-label="Captures Grafana de Strava V2">
+						<figure class="project-preview carousel-slide" id="strava-slide-1" role="group" aria-roledescription="diapositive" aria-label="1 sur 2">
+							<a href="assets/images/strava-grafana.webp" target="_blank" rel="noopener" aria-label="Ouvrir la capture Grafana de Strava V2 en grand (nouvel onglet)">
+								<img src="assets/images/strava-grafana.webp" alt="Tableau de bord Grafana de Strava V2 : classement des kudos avec noms fictifs et carte des activités sportives." width="1616" height="803" loading="lazy" decoding="async">
+								<span class="preview-action">Agrandir <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></span>
+							</a>
+							<figcaption>Aperçu Grafana · noms du classement fictifs</figcaption>
+						</figure>
+						<figure class="project-preview carousel-slide" id="strava-slide-2" role="group" aria-roledescription="diapositive" aria-label="2 sur 2">
+							<a href="assets/images/strava-grafana-stats-3.webp" target="_blank" rel="noopener" aria-label="Ouvrir les statistiques Grafana de Strava V2 en grand (nouvel onglet)">
+								<img src="assets/images/strava-grafana-stats-3.webp" alt="Tableau de bord Grafana de Strava V2 : segments sportifs, distances par jour de la semaine et statistiques par ville." width="1436" height="811" loading="lazy" decoding="async">
+								<span class="preview-action">Agrandir <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></span>
+							</a>
+							<figcaption>Segments · distances hebdomadaires · villes</figcaption>
+						</figure>
+						<div class="carousel-controls" hidden>
+							<button type="button" class="carousel-prev" aria-label="Capture précédente" aria-controls="strava-slide-1 strava-slide-2">←</button>
+							<span class="carousel-status" aria-live="polite" aria-atomic="true">1 / 2</span>
+							<button type="button" class="carousel-next" aria-label="Capture suivante" aria-controls="strava-slide-1 strava-slide-2">→</button>
+						</div>
+						</div>
 						<ul class="tags" aria-label="Technologies"><li>Python</li><li>GitHub Actions</li><li>Redis</li><li>Grafana</li></ul>
 					</article>
 					<article class="project reveal">
@@ -240,17 +297,24 @@
 							<span class="project-kind">Algorithmique</span>
 						</div>
 						<h3>Advent of Code 2022</h3>
-						<p>Solutions aux puzzles quotidiens de l’Advent of Code 2022 : une série de problèmes algorithmiques variés pour affiner la résolution de problèmes et la pratique du C++.</p>
+						<a class="project-repo" href="https://github.com/Giraulth/aoc2022" aria-label="Voir le dépôt Advent of Code 2022 sur GitHub">Voir le dépôt <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
+						<p>Solutions aux puzzles quotidiens de l'Advent of Code 2022 : une série de problèmes algorithmiques variés pour affiner la résolution de problèmes et la pratique du C++.</p>
+						<figure class="project-preview aoc-preview">
+							<a href="assets/images/advent-of-code.svg" target="_blank" rel="noopener" aria-label="Ouvrir le visuel Advent of Code 2022 en grand (nouvel onglet)">
+								<img src="assets/images/advent-of-code.svg" alt="Illustration originale d’un paysage hivernal et d’un terminal C++ pour Advent of Code 2022." width="960" height="540" loading="lazy" decoding="async">
+								<span class="preview-action">Agrandir <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></span>
+							</a>
+							<figcaption>Advent of Code 2022 · illustration</figcaption>
+						</figure>
 						<ul class="tags" aria-label="Technologies"><li>C++</li><li>Algorithmes</li></ul>
 					</article>
 				</div>
-				<a class="text-link" href="https://github.com/Giraulth?tab=repositories">Tous mes dépôts sur GitHub <svg class="icon" aria-hidden="true"><use href="#i-ext"/></svg></a>
 			</div>
 		</section>
 
 		<section class="section" id="competences" aria-labelledby="competences-title">
 			<div class="section-head reveal">
-				<p class="section-label">04 — Compétences</p>
+				<p class="section-label">05 — Compétences</p>
 				<h2 class="section-title" id="competences-title">Compétences <em>&amp; formation</em></h2>
 			</div>
 			<div class="indent">
@@ -272,15 +336,15 @@
 						<ul class="chips"><li>Docker</li><li>Kubernetes</li><li>Ansible</li><li>CI/CD</li><li>Prometheus</li></ul>
 					</div>
 					<div class="skill-group reveal">
-						<h3>Savoir-être</h3>
-						<ul class="chips"><li>Communication efficace</li><li>Esprit d’équipe</li><li>Autonomie</li><li>Bonne gestion du temps</li></ul>
+						<h3>Collaboration &amp; savoir-être</h3>
+						<ul class="chips"><li>Revue de code (PR)</li><li>Accompagnement des collègues</li><li>Communication efficace</li><li>Esprit d'équipe</li><li>Autonomie</li><li>Bonne gestion du temps</li></ul>
 					</div>
 				</div>
 				<div class="cards">
 					<article class="card reveal">
 						<p class="card-label"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Formation</p>
 						<h3>INSA Rennes</h3>
-						<p>Diplôme d’ingénieur informatique, option cloud</p>
+						<p>Diplôme d'ingénieur informatique, option cloud</p>
 						<p class="role-date">2017 — 2022</p>
 					</article>
 					<article class="card reveal">
@@ -296,9 +360,9 @@
 
 		<section class="section contact" id="contact" aria-labelledby="contact-title">
 			<div class="section-head reveal">
-				<p class="section-label">05 — Contact</p>
+				<p class="section-label">06 — Contact</p>
 				<div>
-					<h2 class="contact-title" id="contact-title">Envie d’<em>échanger</em>&nbsp;?</h2>
+					<h2 class="contact-title" id="contact-title">Envie d'<em>échanger</em>&nbsp;?</h2>
 					<a class="mail-link" href="mailto:hugo.girault@broadpeak.tv">hugo.girault@broadpeak.tv</a>
 					<div class="contact-actions">
 						<a class="btn btn-ghost" href="https://www.linkedin.com/in/hugo-girault-591453159/"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
@@ -312,7 +376,6 @@
 
 	<footer class="site-footer container">
 		<span>Hugo Girault · Ingénieur R&amp;D</span>
-		<span>Basé sur DevResume par <a href="https://themes.3rdwavemedia.com/">Xiaoying Riley</a></span>
 		<a href="#accueil">Retour en haut ↑</a>
 	</footer>
 

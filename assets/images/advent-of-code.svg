@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+	<defs>
+		<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#111b30"/><stop offset="1" stop-color="#365b69"/></linearGradient>
+		<linearGradient id="snow" x2="0" y2="1"><stop stop-color="#c9dfdf"/><stop offset="1" stop-color="#789fa7"/></linearGradient>
+	</defs>
+	<rect width="960" height="540" fill="url(#sky)"/>
+	<g fill="#d9eeee" opacity=".7"><circle cx="45" cy="50" r="2"/><circle cx="140" cy="100" r="2"/><circle cx="250" cy="40" r="2"/><circle cx="350" cy="90" r="2"/><circle cx="455" cy="35" r="2"/><circle cx="810" cy="40" r="2"/><circle cx="900" cy="105" r="2"/></g>
+	<circle cx="170" cy="120" r="45" fill="#d2ede7"/>
+	<path d="M0 410 240 145 470 410 640 210 960 480V540H0Z" fill="#456878"/>
+	<path d="m240 145-75 85 70-24 37 34 36-18Z" fill="#e5eeee"/>
+	<path d="M0 455 90 320 280 510 400 300 610 535 960 440V540H0Z" fill="#203f4c"/>
+	<path d="M0 495Q220 430 455 510T960 470V540H0Z" fill="url(#snow)"/>
+	<g fill="#102d32"><path d="m75 345-40 80h22l-38 65h112l-39-65h24Z"/><path d="m330 380-32 65h18l-30 55h89l-31-55h18Z"/><path d="m875 320-45 90h24l-42 72h126l-44-72h26Z"/></g>
+	<rect x="450" y="90" width="440" height="345" rx="18" fill="#0e141e" stroke="#607881"/>
+	<path d="M450 134h440" stroke="#364957"/>
+	<g fill="#79bba7"><circle cx="475" cy="112" r="5"/><circle cx="493" cy="112" r="5"/><circle cx="511" cy="112" r="5"/></g>
+	<g font-family="ui-monospace, monospace">
+		<text x="478" y="176" fill="#81dac2" font-size="15">// A winter of puzzles</text>
+		<text x="478" y="224" fill="#edf3f1" font-size="27">Advent of Code</text>
+		<text x="478" y="282" fill="#a7eee0" font-size="52">2022</text>
+		<text x="478" y="334" fill="#a6b8c9" font-size="17">while (there_are_puzzles) {</text>
+		<text x="478" y="362" fill="#edf3f1" font-size="17">  think(); solve(); repeat();</text>
+		<text x="478" y="390" fill="#a6b8c9" font-size="17">}</text>
+	</g>
+</svg>

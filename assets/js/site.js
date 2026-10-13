@@ -19,6 +19,35 @@ themeToggle.addEventListener('click', () => {
 
 document.getElementById('print-resume').addEventListener('click', () => window.print());
 
+document.querySelectorAll('.project-carousel').forEach((carousel) => {
+	const slides = [...carousel.querySelectorAll('.carousel-slide')];
+	const controls = carousel.querySelector('.carousel-controls');
+	const status = carousel.querySelector('.carousel-status');
+	let current = 0;
+
+	const showSlide = (index) => {
+		current = (index + slides.length) % slides.length;
+		slides.forEach((slide, slideIndex) => { slide.hidden = slideIndex !== current; });
+		if (current !== 0) slides[current].querySelector('img').loading = 'eager';
+		status.textContent = `${current + 1} / ${slides.length}`;
+	};
+
+	carousel.querySelector('.carousel-prev').addEventListener('click', () => showSlide(current - 1));
+	carousel.querySelector('.carousel-next').addEventListener('click', () => showSlide(current + 1));
+	carousel.addEventListener('keydown', (event) => {
+		if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+		event.preventDefault();
+		if (slides[current].contains(document.activeElement)) {
+			carousel.querySelector(event.key === 'ArrowRight' ? '.carousel-next' : '.carousel-prev').focus();
+		}
+		showSlide(current + (event.key === 'ArrowRight' ? 1 : -1));
+	});
+
+	showSlide(0);
+	carousel.classList.add('carousel-ready');
+	controls.hidden = false;
+});
+
 const navLinks = new Map([...document.querySelectorAll('.nav-links a')].map((link) => [link.hash.slice(1), link]));
 const sections = [...document.querySelectorAll('main > section[id]')];
 let navUpdateQueued = false;
